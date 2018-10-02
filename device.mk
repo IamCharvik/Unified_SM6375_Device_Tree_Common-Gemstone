@@ -6,3 +6,7 @@
 
 # Inherit from sm6375-common
 $(call inherit-product, device/xiaomi/sm6375-common/common.mk)
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
