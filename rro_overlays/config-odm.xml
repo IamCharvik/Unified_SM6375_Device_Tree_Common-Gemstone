@@ -11,4 +11,9 @@
     <overlay package="com.android.providers.settings.overlay.sunstonecn" mutable="false" enabled="true" />
     <overlay package="com.android.providers.settings.overlay.sunstonegl" mutable="false" enabled="true" />
     <overlay package="com.android.providers.settings.overlay.sunstonex" mutable="false" enabled="true" />
+    <overlay package="com.android.wifi.resources.overlay.moonstonegl" mutable="false" enabled="true" />
+    <overlay package="com.android.wifi.resources.overlay.moonstonein" mutable="false" enabled="true" />
+    <overlay package="com.android.wifi.resources.overlay.sunstonecn" mutable="false" enabled="true" />
+    <overlay package="com.android.wifi.resources.overlay.sunstonegl" mutable="false" enabled="true" />
+    <overlay package="com.android.wifi.resources.overlay.sunstonex" mutable="false" enabled="true" />
 </config>

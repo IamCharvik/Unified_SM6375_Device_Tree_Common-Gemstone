@@ -16,7 +16,12 @@ PRODUCT_PACKAGES += \
     SettingsProviderOverlayMoonstoneIn \
     SettingsProviderOverlaySunstoneCn \
     SettingsProviderOverlaySunstoneGl \
-    SettingsProviderOverlaySunstoneX
+    SettingsProviderOverlaySunstoneX \
+    WifiOverlayMoonstoneGl \
+    WifiOverlayMoonstoneIn \
+    WifiOverlaySunstoneCn \
+    WifiOverlaySunstoneGl \
+    WifiOverlaySunstoneX
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rro_overlays/config-odm.xml:$(TARGET_COPY_OUT_ODM)/overlay/config/config.xml
