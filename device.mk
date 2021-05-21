@@ -11,7 +11,12 @@ $(call inherit-product, device/xiaomi/sm6375-common/common.mk)
 PRODUCT_PACKAGES += \
     FrameworkOverlayGemstone \
     FrameworkOverlayMoonstoneGl \
-    FrameworkOverlayMoonstoneIn
+    FrameworkOverlayMoonstoneIn \
+    SettingsProviderOverlayMoonstoneGl \
+    SettingsProviderOverlayMoonstoneIn \
+    SettingsProviderOverlaySunstoneCn \
+    SettingsProviderOverlaySunstoneGl \
+    SettingsProviderOverlaySunstoneX
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rro_overlays/config-odm.xml:$(TARGET_COPY_OUT_ODM)/overlay/config/config.xml

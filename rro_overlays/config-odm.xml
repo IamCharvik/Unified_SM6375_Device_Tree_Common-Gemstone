@@ -6,4 +6,9 @@
     <overlay package="android.overlay.gemstone" mutable="false" enabled="true" />
     <overlay package="android.overlay.moonstonegl" mutable="false" enabled="true" />
     <overlay package="android.overlay.moonstonein" mutable="false" enabled="true" />
+    <overlay package="com.android.providers.settings.overlay.moonstonegl" mutable="false" enabled="true" />
+    <overlay package="com.android.providers.settings.overlay.moonstonein" mutable="false" enabled="true" />
+    <overlay package="com.android.providers.settings.overlay.sunstonecn" mutable="false" enabled="true" />
+    <overlay package="com.android.providers.settings.overlay.sunstonegl" mutable="false" enabled="true" />
+    <overlay package="com.android.providers.settings.overlay.sunstonex" mutable="false" enabled="true" />
 </config>
