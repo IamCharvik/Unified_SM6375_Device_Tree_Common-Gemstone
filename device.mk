@@ -7,6 +7,9 @@
 # Inherit from sm6375-common
 $(call inherit-product, device/xiaomi/sm6375-common/common.mk)
 
+# Init
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_xiaomi_gemstone)
+
 # Overlay
 PRODUCT_PACKAGES += \
     ApertureOverlayGemstone \
