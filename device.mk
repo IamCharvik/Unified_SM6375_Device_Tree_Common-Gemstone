@@ -9,6 +9,7 @@ $(call inherit-product, device/xiaomi/sm6375-common/common.mk)
 
 # Overlay
 PRODUCT_PACKAGES += \
+    ApertureOverlayGemstone \
     FrameworkOverlayGemstone \
     FrameworkOverlayMoonstoneGl \
     FrameworkOverlayMoonstoneIn \
