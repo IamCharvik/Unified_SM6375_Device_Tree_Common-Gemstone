@@ -9,9 +9,18 @@ from extract_utils.main import (
     ExtractUtilsModule,
 )
 
+namespace_imports = [
+    'hardware/qcom-caf/common/libqti-perfd-client',
+    'hardware/qcom-caf/sm8350',
+    'hardware/xiaomi',
+    'vendor/qcom/opensource/display',
+    'vendor/xiaomi/sm6375-common',
+]
+
 module = ExtractUtilsModule(
     'gemstone',
     'xiaomi',
+    namespace_imports=namespace_imports,
 )
 
 if __name__ == '__main__':
