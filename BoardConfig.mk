@@ -17,3 +17,6 @@ TARGET_KERNEL_CONFIG := moonstone_defconfig
 
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := moonstone,sunstone,gemstone
+
+# Properties
+TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
