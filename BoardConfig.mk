@@ -145,6 +145,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
+BOARD_VENDOR := xiaomi
 TARGET_BOARD_PLATFORM := holi
 
 # Properties
