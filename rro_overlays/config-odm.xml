@@ -1,0 +1,9 @@
+<!--
+     Copyright (C) 2024 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<config>
+    <overlay package="android.overlay.gemstone" mutable="false" enabled="true" />
+    <overlay package="android.overlay.moonstonegl" mutable="false" enabled="true" />
+    <overlay package="android.overlay.moonstonein" mutable="false" enabled="true" />
+</config>
