@@ -21,5 +21,11 @@ PRODUCT_DEVICE := gemstone
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := 22111317G
 PRODUCT_NAME := lineage_gemstone
+PRODUCT_SYSTEM_NAME := sunstone_eea
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildDesc="sunstone_eea-user 14 UKQ1.240624.001 OS2.0.9.0.UMQEUXM release-keys" \
+    BuildFingerprint=Redmi/sunstone_eea/sunstone:14/UKQ1.240624.001/OS2.0.9.0.UMQEUXM:user/release-keys \
+    DeviceProduct=$(PRODUCT_SYSTEM_NAME)

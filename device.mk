@@ -71,3 +71,6 @@ PRODUCT_SOONG_NAMESPACES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     init.device.rc
+
+# Call the proprietary setup
+$(call inherit-product, vendor/xiaomi/gemstone/gemstone-vendor.mk)

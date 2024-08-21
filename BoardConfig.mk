@@ -21,3 +21,10 @@ TARGET_OTA_ASSERT_DEVICE := moonstone,sunstone,gemstone
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+# Security patch
+BOOT_SECURITY_PATCH := 2026-02-01
+VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
+
+# Inherit the proprietary files
+include vendor/xiaomi/gemstone/BoardConfigVendor.mk
