@@ -16,7 +16,8 @@ PRODUCT_COPY_FILES += \
 
 # Display
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/display_id_4630947218746568833.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947218746568833.xml
+    $(LOCAL_PATH)/configs/display_id_4630947218746568833.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947218746568833.xml \
+    $(LOCAL_PATH)/configs/qdcm_calib_data_xiaomi_m17_38_0c_0a_fhd_dsc_video_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_xiaomi_m17_38_0c_0a_fhd_dsc_video_dsi_panel.xml
 
 # Init
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_xiaomi_gemstone)
