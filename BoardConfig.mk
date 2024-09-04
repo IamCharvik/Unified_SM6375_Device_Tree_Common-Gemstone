@@ -12,5 +12,8 @@ include device/xiaomi/sm6375-common/BoardConfigCommon.mk
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := gemstone
 
+# Kernel
+TARGET_KERNEL_CONFIG := moonstone_defconfig
+
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := moonstone,sunstone,gemstone
