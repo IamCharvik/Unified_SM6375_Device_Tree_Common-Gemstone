@@ -4,6 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+from extract_utils.fixups_lib import (
+    lib_fixups,
+    lib_fixups_user_type,
+)
 from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
@@ -17,9 +21,14 @@ namespace_imports = [
     'vendor/xiaomi/sm6375-common',
 ]
 
+lib_fixups: lib_fixups_user_type = {
+    **lib_fixups,
+}
+
 module = ExtractUtilsModule(
     'gemstone',
     'xiaomi',
+    lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
 )
 
