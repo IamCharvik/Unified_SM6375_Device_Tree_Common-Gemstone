@@ -167,6 +167,7 @@ persist.vendor.dpmhalservice.enable=1
 drm.service.enabled=true
 
 # Graphics
+debug.renderengine.backend=skiavkthreaded
 debug.sf.auto_latch_unsignaled=0
 debug.sf.latch_unsignaled=1
 debug.hwui.skia_tracing_enabled=false
