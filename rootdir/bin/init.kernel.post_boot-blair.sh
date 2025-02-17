@@ -76,12 +76,6 @@ function configure_memory_parameters() {
 	MemTotal=${MemTotalStr:16:8}
 	# Set Memory parameters.
 
-	# Set swappiness to 100 for all targets
-	#echo 100 > /proc/sys/vm/swappiness
-
-        # Set swappiness to 180 for all targets
-	echo 180 > /proc/sys/vm/swappiness
-
 	# Set lz4 algorithm for zRAM compression
 	echo lz4 > /sys/block/zram0/comp_algorithm
 
@@ -95,7 +89,7 @@ function configure_memory_parameters() {
 	configure_zram_parameters
 
 	#Spawn 2 kswapd threads which can help in fast reclaiming of pages
-	echo 1 > /proc/sys/vm/kswapd_threads
+	echo 2 > /proc/sys/vm/kswapd_threads
 
 	echo 10 > /proc/sys/vm/dirty_ratio
 	echo 5  > /proc/sys/vm/dirty_background_ratio
