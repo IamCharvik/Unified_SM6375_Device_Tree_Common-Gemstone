@@ -30,12 +30,12 @@ struct dalvik_heap_info {
 };
 
 static const dalvik_heap_info dalvik_heap_info_6144 = {
-        .heapstartsize = "16m",
+        .heapstartsize = "8m",
         .heapgrowthlimit = "256m",
         .heapsize = "512m",
         .heapminfree = "8m",
-        .heapmaxfree = "32m",
-        .heaptargetutilization = "0.5",
+        .heapmaxfree = "16m",
+        .heaptargetutilization = "0.6",
 };
 
 static const dalvik_heap_info dalvik_heap_info_4096 = {
