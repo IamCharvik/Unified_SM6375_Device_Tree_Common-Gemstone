@@ -384,3 +384,8 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     group system
     disabled
     oneshot
+
+on property:vendor.post_boot.parsed=1
+    # Kill CPU input boost
+    write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0 0 0 0 0 0 0"
+    write /sys/devices/system/cpu/cpu_boost/input_boost_ms 0
