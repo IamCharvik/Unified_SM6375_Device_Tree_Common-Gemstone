@@ -35,7 +35,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('0x1F', '0x0'),
     'vendor/etc/libnfc-hal-st.conf': blob_fixup()
         .regex_replace('White list', 'Allow list')
-        .regex_replace('DEVICE_HOST_WHITE_LIST', 'DEVICE_HOST_ALLOW_LIST'),
+        .regex_replace('DEVICE_HOST_WHITE_LIST', 'DEVICE_HOST_ALLOW_LIST')
+        .regex_replace('#STNFC_FW_BIN_NAME="st21nfc_fw.bin"', 'STNFC_FW_BIN_NAME="st21nfc_fw7.bin"'),
     ('vendor/lib64/libalLDC.so', 'vendor/lib64/libalhLDC.so'): blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('AHardwareBuffer_describe')
