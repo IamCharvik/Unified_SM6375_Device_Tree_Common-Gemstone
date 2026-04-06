@@ -93,6 +93,10 @@ function configure_memory_parameters() {
 
 	#Spawn 2 kswapd threads which can help in fast reclaiming of pages
 	echo 1 > /proc/sys/vm/kswapd_threads
+
+	echo 10 > /proc/sys/vm/dirty_ratio
+	echo 5  > /proc/sys/vm/dirty_background_ratio
+	echo 50 > /proc/sys/vm/vfs_cache_pressure
 }
 
 # Core control parameters for silver
@@ -137,6 +141,7 @@ echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
 echo 1113600 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
+echo 80 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_load
 echo 576000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 
 # configure governor settings for gold cluster
