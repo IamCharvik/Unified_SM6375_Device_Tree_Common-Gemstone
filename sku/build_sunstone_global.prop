@@ -4,6 +4,6 @@
 bluetooth.device.default_name=Redmi Note 12 5G
 ro.product.odm.device=sunstone
 ro.product.odm.model=22111317G
-ro.product.odm.name=sunstone_global
+ro.product.odm.name=sunstone_eea
 ro.product.odm.brand=Redmi
 # end sku build properties
