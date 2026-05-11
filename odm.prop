@@ -1,3 +1,7 @@
 # SKU properties
 ro.product.property_source_order=odm,product,vendor,system_ext,system
 import /odm/etc/build_${ro.boot.product.hardware.sku}.prop
+
+# Fingerprint
+ro.odm.build.fingerprint=${ro.product.odm.brand}/${ro.product.odm.name}/${ro.product.odm.device}:14/UKQ1.240624.001/OS2.0.9.0.UMQEUXM:user/release-keys
+ro.build.fingerprint=${ro.product.odm.brand}/${ro.product.odm.name}/${ro.product.odm.device}:14/UKQ1.240624.001/OS2.0.9.0.UMQEUXM:user/release-keys
