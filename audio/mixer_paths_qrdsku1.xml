@@ -276,7 +276,7 @@
     <ctl name="ADC2_MIXER Switch" value="0"/>
     <ctl name="ADC3_MIXER Switch" value="0"/>
     <ctl name="ADC4_MIXER Switch" value="0"/>
-    <ctl name="ADC2 MUX" value="INP2"/>
+    <ctl name="ADC2 MUX" value="ZERO"/>
     <ctl name="DEC0_BCS Switch" value="0"/>
     <ctl name="TX_AIF1_CAP Mixer DEC0" value="0"/>
     <ctl name="TX_AIF1_CAP Mixer DEC1" value="0"/>
@@ -2070,7 +2070,7 @@
         <ctl name="IIR0 Enable Band5" value="1"/>
     </path>
     <path name="afe-sidetone">
-        <ctl name="Voice Sidetone Enable" value="1"/>
+        <ctl name="Voice Sidetone Enable" value="0"/>
     </path>
     <path name="speaker-mic-liquid">
         <path name="amic5"/>
@@ -2204,21 +2204,7 @@
     </path>
     <path name="voice-speaker-stereo-vbat">
         <path name="speaker-vbat"/>
-    </path>
-    <path name="amic1">
-        <ctl name="TX DEC0 MUX" value="SWR_MIC"/>
-        <ctl name="ADC1 ChMap" value="SWRM_TX1_CH1"/>
-        <ctl name="TX SMIC MUX0" value="SWR_MIC0"/>
-        <ctl name="TX_CDC_DMA_TX_3 Channels" value="One"/>
-        <ctl name="TX_AIF1_CAP Mixer DEC0" value="1"/>
-        <ctl name="ADC1_MIXER Switch" value="1"/>
-    </path>
-    <path name="speaker-mic">
-        <path name="amic1"/>
-    </path>
-    <path name="voice-speaker-mic">
-        <path name="speaker-mic"/>
-    </path>
+    </path>  
     <path name="voice-headphones">
         <path name="headphones"/>
     </path>
@@ -2283,35 +2269,17 @@
         <ctl name="ADC2_MIXER Switch" value="1"/>
         <ctl name="ADC2 MUX" value="INP3"/>
     </path>
-    <path name="speaker-dmic-endfire">
-        <ctl name="TX_CDC_DMA_TX_3 Channels" value="Two"/>
-        <ctl name="TX DEC1 MUX" value="SWR_MIC"/>
-        <ctl name="TX SMIC MUX1" value="SWR_MIC0"/>
-        <ctl name="ADC1 ChMap" value="SWRM_TX1_CH1"/>
-        <ctl name="TX_AIF1_CAP Mixer DEC1" value="1"/>
-        <ctl name="ADC1_MIXER Switch" value="1"/>
-        <ctl name="TX DEC2 MUX" value="SWR_MIC"/>
-        <ctl name="TX SMIC MUX2" value="SWR_MIC4"/>
-        <ctl name="ADC2 ChMap" value="SWRM_TX2_CH1"/>
-        <ctl name="TX_AIF1_CAP Mixer DEC2" value="1"/>
-        <ctl name="ADC2_MIXER Switch" value="1"/>
-        <ctl name="ADC2 MUX" value="INP3"/>
-    </path>
-    <path name="handset-mic">
-        <path name="speaker-dmic-endfire"/>
-    </path>
-    <path name="voice-handset-mic">
-        <path name="handset-mic"/>
-    </path>
+    <path name="speaker-mic">
+        <path name="amic3"/>
+    </path> 
     <path name="voice-rec-mic">
-        <path name="handset-mic"/>
-    </path>
-    <path name="camcorder-mic">
-        <path name="handset-mic"/>
-    </path>
-    <path name="bt-sco-headset"/>
+        <path name="amic3"/>
+        <ctl name="ADC2 Volume" value="8"/>
+        <ctl name="TX_DEC0 Volume" value="86"/>
+    </path>     
+    <path name="bt-sco-headset"/> 
     <path name="bt-sco-mic"/>
-    <path name="bt-sco-headset-wb"/>
+    <path name="bt-sco-headset-wb"/> 
     <path name="bt-sco-mic-wb"/>
     <path name="bt-sco-headset-swb"/>
     <path name="bt-sco-mic-swb"/>
@@ -2330,18 +2298,38 @@
         <ctl name="ADC1 ChMap" value="SWRM_TX1_CH1"/>
         <ctl name="TX_AIF1_CAP Mixer DEC2" value="1"/>
         <ctl name="ADC1_MIXER Switch" value="1"/>
-    </path>
-    <path name="dmic-endfire">
-        <path name="handset-dmic-endfire"/>
-        <ctl name="IIR0 INP0 MUX" value="DEC2"/>
-    </path>
-    <path name="dmic-endfire-liquid">
-        <path name="handset-dmic-endfire"/>
-        <ctl name="IIR0 INP0 MUX" value="DEC7"/>
-    </path>
+    </path> 
     <path name="handset-stereo-dmic-ef">
         <path name="handset-dmic-endfire"/>
     </path>
+    <path name="handset-mic">
+        <path name="handset-stereo-dmic-ef"/>
+    </path> 
+    <path name="camcorder-mic">
+        <path name="handset-mic"/>
+    </path>     
+    <path name="dmic-endfire-liquid">
+        <path name="handset-dmic-endfire"/>
+        <ctl name="IIR0 INP0 MUX" value="DEC7"/>
+    </path>   
+    <path name="speaker-dmic-endfire">
+        <ctl name="TX_CDC_DMA_TX_3 Channels" value="Two"/>
+        <ctl name="TX DEC1 MUX" value="SWR_MIC"/>
+        <ctl name="TX SMIC MUX1" value="SWR_MIC0"/>
+        <ctl name="ADC1 ChMap" value="SWRM_TX1_CH1"/>
+        <ctl name="TX_AIF1_CAP Mixer DEC1" value="1"/>
+        <ctl name="ADC1_MIXER Switch" value="1"/>
+        <ctl name="TX DEC2 MUX" value="SWR_MIC"/>
+        <ctl name="TX SMIC MUX2" value="SWR_MIC4"/>
+        <ctl name="ADC2 ChMap" value="SWRM_TX2_CH1"/>
+        <ctl name="TX_AIF1_CAP Mixer DEC2" value="1"/>
+        <ctl name="ADC2_MIXER Switch" value="1"/>
+        <ctl name="ADC2 MUX" value="INP3"/>
+    </path>
+    <path name="dmic-endfire">
+        <path name="speaker-dmic-endfire"/>
+        <ctl name="IIR0 INP0 MUX" value="DEC2"/>
+    </path>  
     <path name="speaker-stereo-dmic-ef">
         <path name="speaker-dmic-endfire"/>
     </path>
@@ -2350,10 +2338,13 @@
     </path>
     <path name="voice-dmic-ef">
         <path name="dmic-endfire"/>
-    </path>
+    </path> 
     <path name="voice-speaker-dmic-ef">
         <path name="speaker-dmic-endfire"/>
-    </path>
+    </path>  
+    <path name="voice-speaker-mic">
+        <path name="voice-speaker-dmic-ef"/>
+    </path>     
     <path name="voice-rec-dmic-ef">
         <path name="dmic-endfire"/>
     </path>
@@ -2362,7 +2353,7 @@
     </path>
     <path name="hearing-aid-mic">
         <path name="voice-speaker-mic"/>
-    </path>
+    </path>   
     <path name="handset-stereo-dmic-ef-liquid">
         <path name="handset-dmic-endfire"/>
     </path>
@@ -3369,7 +3360,7 @@
     <path name="echo-reference">
         <ctl name="AUDIO_REF_EC_UL1 MUX" value="RX_CDC_DMA_RX_1"/>
         <ctl name="EC Reference Channels" value="One"/>
-    </path>
+    </path> 
     <path name="echo-reference handset">
         <ctl name="AUDIO_REF_EC_UL1 MUX" value="RX_CDC_DMA_RX_0"/>
         <ctl name="EC Reference Channels" value="One"/>
@@ -3417,6 +3408,14 @@
     <path name="spkr-rx-calib">
         <ctl name="RX_CDC_DMA_RX_1_DL_HL Switch" value="1"/>
     </path>
+    <path name="amic1">
+        <ctl name="TX DEC0 MUX" value="SWR_MIC"/>
+        <ctl name="ADC1 ChMap" value="SWRM_TX1_CH1"/>
+        <ctl name="TX SMIC MUX0" value="SWR_MIC0"/>
+        <ctl name="TX_CDC_DMA_TX_3 Channels" value="One"/>
+        <ctl name="TX_AIF1_CAP Mixer DEC0" value="1"/>
+        <ctl name="ADC1_MIXER Switch" value="1"/>
+    </path> 
     <path name="amic4">
         <ctl name="TX DEC2 MUX" value="SWR_MIC"/>
         <ctl name="TX SMIC MUX2" value="ADC3"/>
