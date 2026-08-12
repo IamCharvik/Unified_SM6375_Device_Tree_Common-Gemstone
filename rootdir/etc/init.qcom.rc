@@ -113,12 +113,6 @@ on post-fs-data
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics
 
-    # Change lm related dirs
-    mkdir /data/vendor/lm 0700 root root
-
-    # Create directory used by powermodule
-    mkdir /data/vendor/pwr 0700 root root
-
     # Create directory used by media clients
     mkdir /data/vendor/media 0770 mediacodec media
 
@@ -226,8 +220,45 @@ on post-fs-data
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
 
-    #Create dir for dolby
-    mkdir /data/vendor/dolby 0770 media media
+    # Allow system to modify exposure dim layer state
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_exposure
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_exposure
+
+    # Allow system to modify hbm state
+    chown system system /sys/devices/platform/soc/5e00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/hbm
+    chmod 0660 /sys/devices/platform/soc/5e00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/hbm
+
+    # Allow system to modify fastcharge nodes
+    chown system system /sys/kernel/fastchgtoggle/mode
+    chmod 0660 /sys/kernel/fastchgtoggle/mode
+    chown system system /sys/kernel/fastchgtoggle/thermals
+    chmod 0660 /sys/kernel/fastchgtoggle/thermals
+    chown system system /sys/kernel/fast_charge/force_fast_charge
+    chmod 0660 /sys/kernel/fast_charge/force_fast_charge
+    chown system system /sys/class/qcom-battery/input_suspend
+    chmod 0660 /sys/class/qcom-battery/input_suspend
+
+    # Allow system to modify swappiness
+    chown system system /proc/sys/vm/swappiness
+    chmod 0660 /proc/sys/vm/swappiness
+
+    # Allow Core Control
+    chown system system /sys/devices/system/cpu/cpu0/online
+    chown system system /sys/devices/system/cpu/cpu1/online
+    chown system system /sys/devices/system/cpu/cpu2/online
+    chown system system /sys/devices/system/cpu/cpu3/online
+    chown system system /sys/devices/system/cpu/cpu4/online
+    chown system system /sys/devices/system/cpu/cpu5/online
+    chown system system /sys/devices/system/cpu/cpu6/online
+    chown system system /sys/devices/system/cpu/cpu7/online
+    chmod 0660 /sys/devices/system/cpu/cpu0/online
+    chmod 0660 /sys/devices/system/cpu/cpu1/online
+    chmod 0660 /sys/devices/system/cpu/cpu2/online
+    chmod 0660 /sys/devices/system/cpu/cpu3/online
+    chmod 0660 /sys/devices/system/cpu/cpu4/online
+    chmod 0660 /sys/devices/system/cpu/cpu5/online
+    chmod 0660 /sys/devices/system/cpu/cpu6/online
+    chmod 0660 /sys/devices/system/cpu/cpu7/online
 
 on property:sys.boot_completed=1
     #Enable UFS clock scaling back
@@ -239,6 +270,23 @@ on property:sys.boot_completed=1
     setprop lmkd.reinit 1
     write /sys/kernel/dload/dload_mode "both"
     write /sys/kernel/dload/emmc_dload 1
+
+    chown system system /proc/sys/kernel/sched_prefer_spread
+    chown system system /proc/sys/kernel/sched_busy_hyst_ns
+    chown system system /proc/sys/kernel/sched_busy_hysteresis_enable_cpus
+    chown system system /proc/sys/kernel/sched_min_task_util_for_boost
+    chown system system /proc/sys/kernel/sched_min_task_util_for_colocation
+    chown system system /dev/cpuctl/foreground/cpu.uclamp.min
+    chown system system /dev/cpuctl/top-app/cpu.uclamp.min
+    chown system system /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive
+    chmod 0664 /proc/sys/kernel/sched_prefer_spread
+    chmod 0664 /proc/sys/kernel/sched_busy_hyst_ns
+    chmod 0664 /proc/sys/kernel/sched_busy_hysteresis_enable_cpus
+    chmod 0664 /proc/sys/kernel/sched_min_task_util_for_boost
+    chmod 0664 /proc/sys/kernel/sched_min_task_util_for_colocation
+    chmod 0664 /dev/cpuctl/foreground/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/top-app/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive
 
 # corefile limit
 on property:persist.debug.trace=1

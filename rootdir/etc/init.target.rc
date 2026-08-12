@@ -151,6 +151,14 @@ on boot
 
 #for goodix dump
     mkdir /data/vendor/goodix 0777 system system
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
+on property:vendor.display.lcd_density=560
+   setprop dalvik.vm.heapgrowthlimit 256m
+
+on property:vendor.display.lcd_density=640
+   setprop dalvik.vm.heapgrowthlimit 512m
 
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}

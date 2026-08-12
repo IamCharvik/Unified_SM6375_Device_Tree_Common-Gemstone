@@ -196,8 +196,9 @@ vendor.media.omx=0
 vendor.media.target_variant=_blair
 vendor.netflix.bsp_rev=Q4350-32962-1
 
-# Perf
-ro.vendor.extension_library=libqti-perfd-client.so
+# NFC
+ro.vendor.nfc.repair=1
+ro.vendor.se.type=HCE,UICC
 
 # RIL
 persist.radio.multisim.config=dsds
