@@ -55,12 +55,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "PMQoSCpuDmaLatency",
-      "Path": "/dev/cpu_dma_latency",
-      "Values": ["44", "1000"],
-      "HoldFd": true
-    },
-    {
       "Name": "UclampTAMin",
       "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
       "Values": [
@@ -310,12 +304,6 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "PMQoSCpuDmaLatency",
-      "Duration": 1500,
-      "Value": "44"
-    },
-    {
-      "PowerHint": "INTERACTION",
       "Node": "UclampTAMin",
       "Duration": 0,
       "Value": "25"
@@ -390,12 +378,6 @@
       "PowerHint": "LAUNCH",
       "Type": "EndHint",
       "Value": "DISABLE_TA_BOOST"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "PMQoSCpuDmaLatency",
-      "Duration": 1500,
-      "Value": "44"
     },
     {
       "PowerHint": "LAUNCH",
