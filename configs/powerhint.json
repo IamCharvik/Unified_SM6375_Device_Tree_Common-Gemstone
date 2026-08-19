@@ -60,29 +60,11 @@
       "Values": [
         "0",
         "25",
+        "30",
         "35",
         "50"
       ],
       "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "UclampFgMin",
-      "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
-      "Values": [
-        "0",
-        "30"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "UclampTALatency",
-      "Path": "/dev/cpuctl/top-app/cpu.uclamp.latency_sensitive",
-      "Values": [
-        "1",
-        "0"
-      ],
       "ResetOnInit": true
     },
     {
@@ -361,123 +343,88 @@
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
-      "Duration": 2500,
+      "Duration": 1000,
       "Value": "9999999"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBWHystTriggerCount",
-      "Duration": 2500,
+      "Duration": 1000,
       "Value": "0"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBWHystLength",
-      "Duration": 2500,
+      "Duration": 1000,
       "Value": "0"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBWHistMemory",
-      "Duration": 2500,
+      "Duration": 1000,
       "Value": "0"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBWMinFreq",
-      "Duration": 2500,
+      "Duration": 1000,
       "Value": "7980"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUDDRLatLittleMinFreq",
-      "Duration": 2500,
+      "Duration": 1000,
       "Value": "7980"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUDDRLatBigMinFreq",
-      "Duration": 2500,
+      "Duration": 1000,
       "Value": "7980"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUDDRLatfloorLittleMinFreq",
-      "Duration": 2500,
+      "Duration": 1000,
       "Value": "7980"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUDDRLatfloorBigMinFreq",
-      "Duration": 2500,
+      "Duration": 1000,
       "Value": "7980"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "GPUForceClkOn",
-      "Duration": 2500,
+      "Duration": 1000,
       "Value": "1"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "GPUForceRailOn",
-      "Duration": 2500,
+      "Duration": 1000,
       "Value": "1"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "GPUIdleTimer",
-      "Duration": 2500,
+      "Duration": 1000,
       "Value": "10000"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "L3LittleClusterMinFreq",
-      "Duration": 2500,
+      "Duration": 1000,
       "Value": "1497600000"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "L3BigClusterMinFreq",
-      "Duration": 2500,
+      "Duration": 1000,
       "Value": "1497600000"
     },
-    {
-      "PowerHint": "FIXED_PERFORMANCE",
-      "Node": "CPUBigClusterMaxFreq",
-      "Duration": 0,
-      "Value": "9999999"
-    },
-    {
-      "PowerHint": "FIXED_PERFORMANCE",
-      "Node": "CPUBigClusterMinFreq",
-      "Duration": 0,
-      "Value": "9999999"
-    },
-    {
-      "PowerHint": "FIXED_PERFORMANCE",
-      "Node": "CPULittleClusterMaxFreq",
-      "Duration": 0,
-      "Value": "9999999"
-    },
-    {
-      "PowerHint": "FIXED_PERFORMANCE",
-      "Node": "CPULittleClusterMinFreq",
-      "Duration": 0,
-      "Value": "9999999"
-    },
-    {
-      "PowerHint": "FIXED_PERFORMANCE",
-      "Node": "GPUMaxFreq",
-      "Duration": 0,
-      "Value": "840000000"
-    },
-    {
-      "PowerHint": "FIXED_PERFORMANCE",
-      "Node": "GPUMinFreq",
-      "Duration": 0,
-      "Value": "840000000"
-    },
+
     {
       "PowerHint": "DISABLE_TA_BOOST",
       "Node": "UclampTAMin",
@@ -522,7 +469,7 @@
       "PowerHint": "GAME",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
-       "Value": "1708800"
+      "Value": "1708800"
     },
     {
       "PowerHint": "GAME",
