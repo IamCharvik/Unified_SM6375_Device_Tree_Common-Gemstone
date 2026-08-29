@@ -99,7 +99,6 @@ BOARD_KERNEL_CMDLINE := \
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6375
 TARGET_KERNEL_CLANG_VERSION := r614150
 TARGET_KERNEL_CONFIG := stone_defconfig
-TARGET_KERNEL_NO_GCC := true
 
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := moonstone,sunstone,gemstone
