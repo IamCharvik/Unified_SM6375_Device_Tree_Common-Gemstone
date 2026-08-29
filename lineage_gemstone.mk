@@ -17,6 +17,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 TARGET_EXCLUDES_AUDIOFX := true
 
+# Disable Matlog
+TARGET_DISABLE_MATLOG := true
+
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := Redmi
 PRODUCT_DEVICE := gemstone
