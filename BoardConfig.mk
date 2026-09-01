@@ -97,6 +97,7 @@ BOARD_KERNEL_CMDLINE := \
     firmware_class.path=/vendor/firmware
 
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6375
+TARGET_KERNEL_CLANG_VERSION := r614150
 TARGET_KERNEL_CONFIG := stone_defconfig
 TARGET_KERNEL_NO_GCC := true
 
