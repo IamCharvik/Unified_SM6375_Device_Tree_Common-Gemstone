@@ -12,8 +12,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from gemstone device
 $(call inherit-product, device/xiaomi/gemstone/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common halogenOS stuff.
+$(call inherit-product, $(CUSTOM_PRODUCT_DIR)/config/common_full_phone.mk)
 
 TARGET_EXCLUDES_AUDIOFX := true
 
@@ -25,7 +25,7 @@ PRODUCT_BRAND := Redmi
 PRODUCT_DEVICE := gemstone
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := 22111317G
-PRODUCT_NAME := lineage_gemstone
+PRODUCT_NAME := aosp_gemstone
 PRODUCT_SYSTEM_NAME := sunstone_eea
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
