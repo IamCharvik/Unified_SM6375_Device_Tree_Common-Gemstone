@@ -193,11 +193,9 @@ PRODUCT_PACKAGES += \
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := true
 
-# Lineage Health
+# Lineage HAL compatibility matrix
 PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
-$(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
+    framework_compatibility_matrix.lineage.xml
 
 # Media
 PRODUCT_COPY_FILES += \
