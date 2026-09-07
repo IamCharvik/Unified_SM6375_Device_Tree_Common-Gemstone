@@ -30,3 +30,6 @@ persist.vendor.data.mode=concurrent
 
 # WFD
 persist.debug.wfd.enable=1
+
+# About phone maintainer (URL-safe Base64 for "IamCharvik")
+ro.custom.build.device.maintainer=SWFtQ2hhcnZpaw==
