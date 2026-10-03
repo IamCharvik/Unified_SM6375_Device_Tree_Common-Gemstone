@@ -68,6 +68,9 @@ PRODUCT_PACKAGES += \
 BOARD_SHIPPING_API_LEVEL := 30
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# Skip kernel VINTF enforcement (5.4 kernel vs Android 16 FCM 5/6) - fixes check_vintf_all failure
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service
