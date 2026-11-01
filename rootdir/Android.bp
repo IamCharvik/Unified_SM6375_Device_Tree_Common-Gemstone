@@ -66,3 +66,9 @@ sh_binary {
     vendor: true,
 }
 
+sh_binary {
+    name: "init.perf.sh",
+    src: "bin/init.perf.sh",
+    vendor: true,
+}
+

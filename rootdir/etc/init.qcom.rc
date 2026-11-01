@@ -382,6 +382,9 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     oneshot
 
 on property:vendor.post_boot.parsed=1
+    # Pin display/GPU IRQs to the gold cores
+    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.perf.sh
+
     # Kill CPU input boost
     write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0 0 0 0 0 0 0"
     write /sys/devices/system/cpu/cpu_boost/input_boost_ms 0
