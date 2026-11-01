@@ -55,6 +55,18 @@ user: AID_SYSTEM
 group: AID_SYSTEM
 caps: 0
 
+[system/addon.d/]
+mode: 0700
+user: AID_ROOT
+group: AID_ROOT
+caps: 0
+
+[system/addon.d/50-lineage.sh]
+mode: 0600
+user: AID_ROOT
+group: AID_ROOT
+caps: 0
+
 [system/bin/cnss-daemon]
 mode: 0755
 user: AID_BLUETOOTH
