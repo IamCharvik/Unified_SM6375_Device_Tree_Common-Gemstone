@@ -267,8 +267,21 @@ vendor/lib64/libvidhance_stabilizer.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
 # Camera configs
+vendor/etc/camera/104_Meet.png
+vendor/etc/camera/108_NorthernEurope.png
+vendor/etc/camera/109_Rome.png
+vendor/etc/camera/110_BlackGold.png
+vendor/etc/camera/121_BBP.png
+vendor/etc/camera/122_Mysterious.png
+vendor/etc/camera/123_GreenOrange.png
+vendor/etc/camera/124_SummerDay.png
+vendor/etc/camera/125_Latin.png
+vendor/etc/camera/126_Fantasy.png
+vendor/etc/camera/127_DustDream.png
+vendor/etc/camera/128_MongKok.png
 vendor/etc/camera/LDC_packdata_xiaomi_M17_Ofilm_3264x2448_20220608.dat
 vendor/etc/camera/LDC_packdata_xiaomi_M17_Sunny_3264x2448_20220707.dat
+vendor/etc/camera/aivsModels1
 vendor/etc/camera/aivsParams
 vendor/etc/camera/aivsParams2
 vendor/etc/camera/camxoverridesettings.txt
@@ -277,8 +290,10 @@ vendor/etc/camera/golden_aac_s5kjn1_wide_ii.bin
 vendor/etc/camera/golden_ofilm_ov48b2q_wide_i.bin
 vendor/etc/camera/golden_sunny_s5kjn1_wide_i.bin
 vendor/etc/camera/libalfpc_tuning_20181222.bin
+vendor/etc/camera/model_ai_dxo.dlc
 vendor/etc/camera/model_back.dlc
 vendor/etc/camera/model_front.dlc
+vendor/etc/camera/model_glass.dlc
 vendor/etc/camera/morpho_lowlight_2.0_India_aac_ov02b10_macro_i.xml
 vendor/etc/camera/morpho_lowlight_2.0_India_aac_s5k3l6_front_i.xml
 vendor/etc/camera/morpho_lowlight_2.0_India_qtech_s5k3l6_front_ii.xml
